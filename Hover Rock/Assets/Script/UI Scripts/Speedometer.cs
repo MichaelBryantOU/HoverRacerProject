@@ -11,13 +11,16 @@ public class Speedometer : MonoBehaviour
     public Transform needleTransform;
 
     public float speedMax;
+    public float speedMin;
     public float speed;
+    public float fakeSpeedRate = 100;
 
     // Start is called before the first frame update
     void Awake()
     {
         needleTransform = transform.Find("needle");
 
+        speedMin = 0f;
         speed = 0f;
         speedMax = 200f;
     }
@@ -25,10 +28,18 @@ public class Speedometer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed += 30f * Time.deltaTime;
+        if (Input.GetKey(KeyCode.W))
+        {
+            speed += fakeSpeedRate * Time.deltaTime;
+        }
+        else
+        {
+            speed -= fakeSpeedRate * Time.deltaTime;
+        }
+
         if (speed > speedMax) speed = speedMax;
+        if (speed < speedMin) speed = speedMin;
         float SpeedRotation = GetSpeedrotation();
-        Debug.Log(SpeedRotation);
         transform.eulerAngles = new Vector3(0, 0, SpeedRotation);
     }
 
