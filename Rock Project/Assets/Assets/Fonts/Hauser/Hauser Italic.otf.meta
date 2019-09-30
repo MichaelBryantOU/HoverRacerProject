@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: e0004d7ce632d3042a2649bf46ce8f2c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hauser
+  fontNames:
+  - Hauser
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 25b6bad056a16fa4ab9e43252de7d50c, type: 3}
+  - {fileID: 12800000, guid: 053fb333090c60f4d91b620f4a92bcec, type: 3}
+  - {fileID: 12800000, guid: 4dfc42cb3f060ab44b25358fb06dd0c4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
